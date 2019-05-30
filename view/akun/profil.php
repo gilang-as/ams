@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Sistem Management Ambalan Pramuka Pada SMA di Indonesia" name="description" />
         <meta content="Cyine ID" name="author" />
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="<?php echo $domain;?>assets/images/favicon.ico">
+        <link href="<?php echo $domain;?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $domain;?>assets/css/app.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div class="wrapper">
@@ -116,37 +116,37 @@
                         <div class="row">
                             <div class="col-md-6 col-lg-2">
                                 <div class="card d-block">
-                                    <img class="card-img-top" src="assets/images/small/small-1.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $domain;?>assets/images/small/small-1.jpg" alt="Card image cap">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2">
                                 <div class="card d-block">
-                                    <img class="card-img-top" src="assets/images/small/small-1.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $domain;?>assets/images/small/small-1.jpg" alt="Card image cap">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2">
                                 <div class="card d-block">
-                                    <img class="card-img-top" src="assets/images/small/small-1.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $domain;?>assets/images/small/small-1.jpg" alt="Card image cap">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2">
                                 <div class="card d-block">
-                                    <img class="card-img-top" src="assets/images/small/small-1.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $domain;?>assets/images/small/small-1.jpg" alt="Card image cap">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2">
                                 <div class="card d-block">
-                                    <img class="card-img-top" src="assets/images/small/small-1.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $domain;?>assets/images/small/small-1.jpg" alt="Card image cap">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2">
                                 <div class="card d-block">
-                                    <img class="card-img-top" src="assets/images/small/small-1.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $domain;?>assets/images/small/small-1.jpg" alt="Card image cap">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2">
                                 <div class="card d-block">
-                                    <img class="card-img-top" src="assets/images/small/small-1.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $domain;?>assets/images/small/small-1.jpg" alt="Card image cap">
                                 </div>
                             </div>
                         </div>
@@ -158,12 +158,12 @@
             </div>
         </div>
         <!-- App js -->
-        <script src="assets/js/app.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/app.min.js"></script>
         <!-- third party js -->
-        <script src="assets/js/vendor/Chart.bundle.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/Chart.bundle.min.js"></script>
         <!-- third party js ends -->
         <!-- demo app -->
-        <script src="assets/js/pages/demo.profile.js"></script>
+        <script src="<?php echo $domain;?>assets/js/pages/demo.profile.js"></script>
         <!-- end demo js-->
     </body>
 </html>

@@ -7,10 +7,10 @@
         <meta content="Sistem Management Ambalan Pramuka Pada SMA di Indonesia" name="description" />
         <meta content="Cyine ID" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="<?php echo $domain;?>assets/images/favicon.ico">
         <!-- App css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $domain;?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $domain;?>assets/css/app.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body class="authentication-bg">
         <div class="account-pages mt-5 mb-5">
@@ -20,7 +20,7 @@
                         <div class="card">
                             <div class="card-header pt-4 pb-4 text-center bg-primary">
                                 <a href="index.html">
-                                    <span><img src="assets/images/logo.png" alt="" height="18"></span>
+                                    <span><img src="<?php echo $domain;?>assets/images/logo.png" alt="" height="18"></span>
                                 </a>
                             </div>
                             <div class="card-body p-4">
@@ -56,6 +56,6 @@
             2020 © AMS - Ambalan Management System v2.0.0 | Powered By <a href="https://cyine.id" alt="Cyine ID">Cyine ID</a>
         </footer>
         <!-- App js -->
-        <script src="assets/js/app.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/app.min.js"></script>
     </body>
 </html>
