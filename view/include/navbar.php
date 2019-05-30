@@ -9,14 +9,44 @@
                         </span>
                     </a>
                     <ul class="metismenu side-nav">
-                        <li class="side-nav-title side-nav-item">Navigation</li>
+                        <li class="side-nav-title side-nav-item">Pengguna</li>
                         <li class="side-nav-item">
                             <a href="<?php domain('dashboard');?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
-                                <span class="badge badge-success float-right">7</span>
                                 <span> Dashboard </span>
                             </a>
                         </li>
+                        <li class="side-nav-item">
+                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                                <i class="dripicons-meter"></i>
+                                <span> SKU </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                                <i class="dripicons-meter"></i>
+                                <span> TKU & TKK </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                                <i class="dripicons-meter"></i>
+                                <span> Materi </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                                <i class="dripicons-meter"></i>
+                                <span> Tugas </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                                <i class="dripicons-meter"></i>
+                                <span> Akun </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-title side-nav-item">Dewan Ambalan</li>
                         <li class="side-nav-item">
                             <a href="javascript: void(0);" class="side-nav-link">
                                 <i class="dripicons-view-apps"></i>
@@ -100,7 +130,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="side-nav-title side-nav-item mt-1">MANAGEMENT ANGGOTA</li>
                         <li class="side-nav-item">
                             <a href="javascript: void(0);" class="side-nav-link">
                                 <i class="dripicons-briefcase"></i>
