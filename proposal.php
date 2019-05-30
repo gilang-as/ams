@@ -1,0 +1,10 @@
+<?php
+include('setting/config.php');
+if($_GET['halaman']=="tambah"){
+    include('view/proposal/tambah.php');
+}elseif($_GET['halaman']=="edit"){
+    include('view/proposal/edit.php');
+}else{
+    include('view/proposal/proposal.php');
+}
+?>

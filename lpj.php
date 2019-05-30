@@ -1,0 +1,10 @@
+<?php
+include('setting/config.php');
+if($_GET['halaman']=="tambah"){
+    include('view/lpj/tambah.php');
+}elseif($_GET['halaman']=="edit"){
+    include('view/lpj/edit.php');
+}else{
+    include('view/lpj/lpj.php');
+}
+?>
