@@ -45,7 +45,7 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-muted">Kembali <a href="pages-login.html" class="text-dark ml-1"><b>Masuk</b></a></p>
+                                <p class="text-muted">Kembali <a href="<?php echo $domain;?>akun/masuk" class="text-dark ml-1"><b>Masuk</b></a></p>
                             </div>
                         </div>
                     </div>

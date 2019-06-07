@@ -22,3 +22,14 @@ RewriteRule ^proposal/([A-Za-z0-9_-]+)$ proposal.php?halaman=$1 [QSA]
 # **** Proposal ****
 RewriteRule ^lpj$ lpj.php [QSA]
 RewriteRule ^lpj/([A-Za-z0-9_-]+)$ lpj.php?halaman=$1 [QSA]
+
+# **** Akun ****
+RewriteRule ^akun/([A-Za-z0-9_-]+)$ akun.php?halaman=$1 [QSA]
+RewriteRule ^akun/profil/([A-Za-z0-9_-]+)$ akun.php?halaman=profil&akun=$2 [QSA]
+RewriteRule ^akun/edit/([A-Za-z0-9_-]+)$ akun.php?halaman=edit&akun=$2 [QSA]
+
+# **** TKU & TKK ****
+RewriteRule ^tku-tkk$ tku-tkk.php [QSA]
+
+# **** SKU ****
+RewriteRule ^sku$ sku.php [QSA]

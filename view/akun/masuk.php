@@ -24,16 +24,16 @@
                             </a>
                         </div>
                         <h4 class="mt-0">Masuk</h4>
-                        <p class="text-muted mb-4">Masukkan email and kata sandi untuk mengakses akun.</p>
-                        <form action="#">
+                        <p class="text-muted mb-4">Masukkan NIS atau Email and kata sandi untuk mengakses akun.</p>
+                        <form method="POST">
                             <div class="form-group">
-                                <label for="emailaddress">Alamat email</label>
-                                <input class="form-control" type="email" id="emailaddress" required="" placeholder="Enter your email">
+                                <label for="emailaddress">NIS / Alamat email</label>
+                                <input class="form-control" type="text" id="nismail" name="nismail" placeholder="NIS atau Email">
                             </div>
                             <div class="form-group">
                                 <a href="pages-recoverpw-2.html" class="text-muted float-right"><small>Lupa Kata Sandi?</small></a>
                                 <label for="password">Kata Sandi</label>
-                                <input class="form-control" type="password" required="" id="password" placeholder="Enter your password">
+                                <input class="form-control" type="password" name="password" id="password" placeholder="Masukkan Sandi">
                             </div>
                             <div class="form-group mb-3">
                                 <div class="custom-control custom-checkbox">

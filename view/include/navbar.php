@@ -17,31 +17,31 @@
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                            <a href="<?php domain('sku');?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
                                 <span> SKU </span>
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                            <a href="<?php domain('tku-tkk');?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
                                 <span> TKU & TKK </span>
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                            <a href="<?php domain('materi');?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
                                 <span> Materi </span>
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                            <a href="<?php domain('tugas');?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
                                 <span> Tugas </span>
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="<?php domain('dashboard');?>" class="side-nav-link">
+                            <a href="<?php domain('akun/profil/'.$_SESSION['nis']);?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
                                 <span> Akun </span>
                             </a>

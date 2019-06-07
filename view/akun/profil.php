@@ -38,10 +38,10 @@
                                         <div class="row">
                                             <div class="col-sm-8">
                                                 <div class="media">
-                                                    <span class="float-left m-2 mr-4"><img src="assets/images/users/avatar-2.jpg" style="height: 100px;" alt="" class="rounded-circle img-thumbnail"></span>
+                                                    <span class="float-left m-2 mr-4"><img src="<?php echo $domain;?>assets/images/users/avatar-2.jpg" style="height: 100px;" alt="" class="rounded-circle img-thumbnail"></span>
                                                     <div class="media-body">
-                                                        <h4 class="mt-1 mb-1 text-white">Gilang Adi Sasongko</h4>
-                                                        <p class="font-13 text-white-50">Brotoseno</p>
+                                                        <h4 class="mt-1 mb-1 text-white"><?php echo $profil['nama'];?></h4>
+                                                        <p class="font-13 text-white-50"><?php echo $profil['ambalan'];?></p>
 
                                                         <ul class="mb-0 list-inline text-light">
                                                             <li class="list-inline-item mr-3">
@@ -58,9 +58,9 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="text-center mt-sm-0 mt-3 text-sm-right">
-                                                    <button type="button" class="btn btn-light">
+                                                    <a href="<?php echo $domain."akun/edit/".$_SESSION['nis'];?>" class="btn btn-light">
                                                         <i class="mdi mdi-account-settings-variant mr-1"></i> Edit Profil
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,22 +81,23 @@
                                     <div class="card-body">
                                         <h4 class="header-title mt-0 mb-3">Informasi</h4>
                                         <p class="text-muted font-13">
-                                            Catatan ...
+                                            <?php echo $profil['catatan'];?>
                                         </p>
                                         <hr/>
                                         <div class="text-left">
-                                            <p class="text-muted"><strong>Nama :</strong> <span class="ml-2">Michael A. Franklin</span></p>
-                                            <p class="text-muted"><strong>Hp :</strong><span class="ml-2">(+12) 123 1234 567</span></p>
-                                            <p class="text-muted"><strong>Whatsapp :</strong><span class="ml-2">(+12) 123 1234 567</span></p>
-                                            <p class="text-muted"><strong>Telegram :</strong><span class="ml-2">(+12) 123 1234 567</span></p>
-                                            <p class="text-muted"><strong>Email :</strong> <span class="ml-2">coderthemes@gmail.com</span></p>
-                                            <p class="text-muted"><strong>Desa :</strong> <span class="ml-2">USA</span></p>
-                                            <p class="text-muted"><strong>Kecamatan :</strong> <span class="ml-2">USA</span></p>
-                                            <p class="text-muted"><strong>Kabupaten :</strong> <span class="ml-2">USA</span></p>
+                                            <p class="text-muted"><strong>Nama :</strong> <span class="ml-2"><?php echo $profil['nama'];?></span></p>
+                                            <p class="text-muted"><strong>Email :</strong> <span class="ml-2"><?php echo $profil['email'];?></span></p>
+                                            <p class="text-muted"><strong>Hp :</strong><span class="ml-2"><?php echo $profil['hp'];?></span></p>
+                                            <p class="text-muted"><strong>Whatsapp :</strong><span class="ml-2"><?php echo $profil['whatsapp'];?></span></p>
+                                            <p class="text-muted"><strong>Telegram :</strong><span class="ml-2"><?php echo $profil['telegram'];?></span></p>
+                                            <p class="text-muted"><strong>Email :</strong> <span class="ml-2"><?php echo $profil['email'];?></span></p>
+                                            <p class="text-muted"><strong>Desa :</strong> <span class="ml-2"><?php echo $profil['desa'];?></span></p>
+                                            <p class="text-muted"><strong>Kecamatan :</strong> <span class="ml-2"><?php echo $profil['kecamatan'];?></span></p>
+                                            <p class="text-muted"><strong>Kabupaten :</strong> <span class="ml-2"><?php echo $profil['kabupaten'];?></span></p>
                                             <p class="text-muted mb-0"><strong>Sosial Media :</strong>
-                                                <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Facebook"><i class="mdi mdi-facebook"></i></a>
-                                                <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Twitter"><i class="mdi mdi-twitter"></i></a>
-                                                <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Skype"><i class="mdi mdi-skype"></i></a>
+                                                <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="<?php echo $profil['facebook'];?>" data-original-title="Facebook"><i class="mdi mdi-facebook"></i></a>
+                                                <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="<?php echo $profil['instagram'];?>" data-original-title="Instagram"><i class="mdi mdi-twitter"></i></a>
+                                                <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="<?php echo $profil['vlezo'];?>" data-original-title="Skype"><i class="mdi mdi-skype"></i></a>
                                             </p>
 
                                         </div>
