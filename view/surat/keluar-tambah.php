@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>Masuk - Ambalan Management System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta content="Sistem Management Ambalan Pramuka Pada SMA di Indonesia" name="description" />
+        <meta content="Cyine ID" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="<?php echo $domain;?>assets/images/favicon.ico">
 
@@ -52,61 +52,8 @@
 
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <form>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="simpleinput">Text</label>
-                                                        <input type="text" id="simpleinput" class="form-control">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-email">Email</label>
-                                                        <input type="email" id="example-email" name="example-email" class="form-control" placeholder="Email">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-password">Password</label>
-                                                        <input type="password" id="example-password" class="form-control" value="password">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-palaceholder">Placeholder</label>
-                                                        <input type="text" id="example-palaceholder" class="form-control" placeholder="placeholder">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-textarea">Text area</label>
-                                                        <textarea class="form-control" id="example-textarea" rows="5"></textarea>
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-readonly">Readonly</label>
-                                                        <input type="text" id="example-readonly" class="form-control" readonly="" value="Readonly value">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-disable">Disabled</label>
-                                                        <input type="text" class="form-control" id="example-disable" disabled="" value="Disabled value">
-                                                    </div>
-    
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-static">Static control</label>
-                                                        <input type="text" readonly class="form-control-plaintext" id="example-static" value="email@example.com">
-                                                    </div>
-
-                                                    <div class="form-group mb-0">
-                                                        <label for="example-helping">Helping text</label>
-                                                        <input type="text" id="example-helping" class="form-control" placeholder="Helping text">
-                                                        <span class="help-block"><small>A block of help text that breaks onto a new line and may extend beyond one line.</small></span>
-                                                    </div>
-        
-                                                </form>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <form>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-select">Input Select</label>
+                                                <div class="form-group mb-3">
+                                                        <label for="example-select">Jenis Surat</label>
                                                         <select class="form-control" id="example-select">
                                                             <option>1</option>
                                                             <option>2</option>
@@ -114,7 +61,12 @@
                                                             <option>4</option>
                                                             <option>5</option>
                                                         </select>
-                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <form>
+        
+                                                    
 
                                                     <div class="form-group mb-3">
                                                         <label for="example-multiselect">Multiple Select</label>

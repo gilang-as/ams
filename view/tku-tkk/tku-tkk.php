@@ -35,7 +35,7 @@
                                 <div class="card text-white bg-info">
                                     <div class="card-body">
                                         <div class="toll-free-box text-center">
-                                            <h4> <i class="mdi mdi-deskphone"></i> Bantara</h4>
+                                            <h4> <i class="mdi mdi-deskphone"></i> <?php echo $data_tku[$_SESSION['ambalan']]['isi'];?></h4>
                                         </div>
                                     </div>
                                 </div>

@@ -55,12 +55,14 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <?php foreach($data as $sku) { ?>
                                                     <tr class="bg-danger text-white">
-                                                        <td>1</td>
-                                                        <td><b>Islam</b><br> - Dapat Menjelaskan Makna Rukun Imam dan Rukun Islam.</td>
+                                                        <td><?php echo $sku['no']; ?></td>
+                                                        <td><?php echo $sku['isi']; ?></td>
                                                         <td>02 Agustus 2015</td>
                                                         <td><i class="mdi mdi-circle text-success"></i> Selesai</td>
                                                     </tr>
+                                                    <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>

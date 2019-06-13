@@ -11,6 +11,7 @@ if($_GET['halaman']=="masuk"){
             $_SESSION['nis'] = $profil['nis'];
             $_SESSION['nama'] = $profil['nama'];
             $_SESSION['ambalan'] = $profil['ambalan'];
+            $_SESSION['angkatan'] = $profil['angkatan'];
             //$_SESSION['foto'] = $profil['foto'];
             $_SESSION['status'] = "masuk";
             header("location:".$domain."akun/profil/".$profil['nis']);
