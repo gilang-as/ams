@@ -1,0 +1,18 @@
+[
+    {
+        "no": 1,
+        "isi": "Pemberitahuan"
+    },
+    {
+        "no": 2,
+        "isi": "Ijin"
+    },
+    {
+        "no": 3,
+        "isi": "Peminjaman"
+    },
+    {
+        "no": 4,
+        "isi": "Lain-lain"
+    }
+]

@@ -14,6 +14,7 @@ RewriteRule ^kegiatan$ kegiatan.php [QSA]
 RewriteRule ^surat$ surat.php [QSA]
 RewriteRule ^surat/([A-Za-z0-9_-]+)$ surat.php?halaman=$1 [QSA]
 RewriteRule ^surat/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ surat.php?halaman=$1&aksi=$2 [QSA]
+RewriteRule ^surat/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ surat.php?halaman=$1&aksi=$2&id=$3 [QSA]
 
 # **** Proposal ****
 RewriteRule ^proposal$ proposal.php [QSA]

@@ -2,7 +2,7 @@
                 <div class="slimscroll-menu">
                     <a href="index.html" class="logo text-center">
                         <span class="logo-lg">
-                            <img src="<?php echo $domain;?>assets/images/ams.png" alt="" height="16">
+                            <img src="<?php echo $domain;?>assets/images/ams.png" alt="" height="30">
                         </span>
                         <span class="logo-sm">
                             <img src="<?php echo $domain;?>assets/images/ams-icon.png" alt="" height="16">

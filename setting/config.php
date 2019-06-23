@@ -1,5 +1,5 @@
 <?php
-error_reporting(1);
+error_reporting(0);
 //Domain "http://localhost/"
 $domain="http://project/ams/";
 //Database

@@ -1,13 +1,54 @@
 <?php
-include('setting/config.php');
+require_once('setting/config.php');
+require_once('function/surat.php');
+$json = file_get_contents('data/jenis_surat.json');
+$jenis_surat = json_decode($json, TRUE);
 if($_GET['halaman']=="masuk"){
-
     if($_GET['aksi']=="tambah"){
+        if(isset($_POST['no_surat']) && isset($_POST['jenis']) && isset($_POST['perihal']) && isset($_POST['tanggal']) && isset($_POST['keterangan'])){
+            if(isset($_FILES['file']['tmp_name'])){
+                $ekstensi_diperbolehkan	= array('png','jpg','pdf','doc','docx');
+                $nama = $_SESSION['angkatan']."_".$_FILES['file']['name'];
+                $x = explode('.', $nama);
+                $ekstensi = strtolower(end($x));
+                $ukuran	= $_FILES['file']['size'];
+                $file_tmp = $_FILES['file']['tmp_name'];
+                
+                if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
+                    if($ukuran < 1044070){			
+                        move_uploaded_file($file_tmp, 'upload/surat/masuk/'.$nama);
+                    }else{
+                        echo 'UKURAN FILE TERLALU BESAR';
+                    }
+                }else{
+                    echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+                }
+            }else{
+                $nama=null;
+            }
+            $data = array( 
+          'dari'	=> $_POST['dari'],
+          'ambalan'	=> $_SESSION['ambalan'],
+          'jenis'	=> $_POST['jenis'],
+          'angkatan'	=> $_SESSION['angkatan'],
+          'tanggal'	=> $_POST['tanggal'],
+          'no_surat'	=> $_POST['no_surat'],
+          'perihal'	=> $_POST['perihal'],
+          'keterangan'	=> $_POST['keterangan'],
+          'file'	=> $nama
+          );
+          tambah_surat_masuk($data);  
+          header("Location:".$domain."surat/masuk");        
+        }
         include('view/surat/masuk-tambah.php');
     }elseif($_GET['aksi']=="edit"){
+        
         include('view/surat/masuk-edit.php');
     }elseif($_GET['aksi']=="hapus"){
     
+    }elseif($_GET['aksi']=="detail" && isset($_GET['id'])){
+        $surat=detail_surat_masuk($_SESSION['angkatan'], $_GET['id']);
+        include('view/surat/masuk-detail.php');
     }else{
         include('view/surat/masuk-daftar.php');
     }
