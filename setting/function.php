@@ -4,6 +4,11 @@ function tema($file){
     global $domain;
     include("view/include/".$file.".php");
 }
+function temaweb($file){
+    global $connect;
+    global $domain;
+    include("view-website/include/".$file.".php");
+}
 function domain($url){
     global $domain;
     echo $domain.$url;
