@@ -6,7 +6,7 @@ $jenis_surat = json_decode($json, TRUE);
 if($_GET['halaman']=="masuk"){
     if($_GET['aksi']=="tambah"){
         if(isset($_POST['no_surat']) && isset($_POST['jenis']) && isset($_POST['perihal']) && isset($_POST['tanggal']) && isset($_POST['keterangan'])){
-            if(isset($_FILES['file']['tmp_name'])){
+            if($_FILES['file']['tmp_name']!=''){
                 $ekstensi_diperbolehkan	= array('png','jpg','pdf','doc','docx');
                 $nama = $_SESSION['angkatan']."_".$_FILES['file']['name'];
                 $x = explode('.', $nama);
@@ -42,7 +42,7 @@ if($_GET['halaman']=="masuk"){
         }
         include('view/surat/masuk-tambah.php');
     }elseif($_GET['aksi']=="edit"){
-        
+        $surat=detail_surat_masuk($_SESSION['angkatan'], $_GET['id']);
         include('view/surat/masuk-edit.php');
     }elseif($_GET['aksi']=="hapus"){
     
@@ -52,9 +52,7 @@ if($_GET['halaman']=="masuk"){
     }else{
         include('view/surat/masuk-daftar.php');
     }
-
 }elseif($_GET['halaman']=="keluar"){
-
     if($_GET['aksi']=="tambah"){
         include('view/surat/keluar-tambah.php');
     }elseif($_GET['aksi']=="edit"){
@@ -64,7 +62,6 @@ if($_GET['halaman']=="masuk"){
     }else{
         include('view/surat/keluar-daftar.php');
     }
-
 }else{
     include('view/surat/surat.php');
 }
