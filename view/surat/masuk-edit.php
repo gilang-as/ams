@@ -83,12 +83,12 @@
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group mb-3">
-                                                    <label for="keteragan">No Surat</label>
+                                                    <label for="keteragan">Keterangan</label>
                                                     <textarea class="form-control" rows=5 id="keterangan" name="keterangan"><?php echo $surat['keterangan'];?></textarea>
                                                 </div>
                                                 <div class="form-group mb-3">
                                                     <label for="file">File</label>
-                                                    <input type="file" class="form-control-file" id="file" name="file" required>
+                                                    <input type="file" class="form-control-file" id="file" name="file">
                                                 </div>
                                                     <a href="<?php echo $domain.'surat/masuk';?>" class="btn btn-danger float-left">Batal</a>
                                                     <button type="submit" class="btn btn-primary float-right">Simpan</button>

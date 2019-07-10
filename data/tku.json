@@ -1,14 +1,13 @@
-{
-    "1":{
-        "isi": "Tamu Ambalan"
-    },
-    "2":{
-        "isi": "Bantara"
-    },
-    "3":{
-        "isi": "Laksana"
-    },
-    "4":{
-        "isi": "Garuda"
-    }
-}
+[{
+    "no": 1,
+    "isi": "Tamu Ambalan"
+},{
+    "no": 2,
+    "isi": "Bantara"
+},{
+    "no": 3,
+    "isi": "Laksana"
+},{
+    "no": 4,
+    "isi": "Garuda"
+}]

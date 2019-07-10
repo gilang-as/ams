@@ -31,8 +31,8 @@ function detail_surat_masuk($angkatan, $id){
 function tambah_surat_masuk($data){
     Insert('cyi_surat_masuk', $data);
 }
-function edit_surat_masuk($data){
-    Update('cyi_surat_masuk', $data);
+function edit_surat_masuk($data, $where){
+    Update('cyi_surat_masuk', $data, $where);
 }
 function hapus_surat_masuk($data){
     Delete('cyi_surat_masuk', $data);
