@@ -1,12 +1,12 @@
 <?php
-function daftar_kegiatan($angkatan){
+function daftar_kegiatan($angkatan, $ambalan){
     global $connect;
-    $quotes_qry="SELECT * FROM cyi_kegiatan WHERE angkatan='".$angkatan."'";
+    $quotes_qry="SELECT * FROM cyi_kegiatan WHERE angkatan='".$angkatan."' AND ambalan='".$ambalan."'";
     return $result=mysqli_query($connect,$quotes_qry); 
 }
-function detail_kegiatan($angkatan, $id){
+function detail_kegiatan($angkatan, $ambalan, $id){
     global $connect;
-    $query="SELECT * FROM cyi_kegiatan WHERE angkatan='".$angkatan."' and id='".$id."'";
+    $query="SELECT * FROM cyi_kegiatan WHERE angkatan='".$angkatan."' AND ambalan='".$ambalan."' AND id='".$id."'";
     return mysqli_fetch_array(mysqli_query($connect,$query));
 }
 function tambah_kegiatan($data){

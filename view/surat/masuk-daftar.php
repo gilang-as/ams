@@ -60,7 +60,7 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                $data = daftar_surat_masuk($_SESSION['angkatan']);
+                                                $data = daftar_surat_masuk($_SESSION['angkatan'], $_SESSION['ambalan']);
                                                 $no=1;
                                                 while($row=mysqli_fetch_array($data)){ 
                                                 ?>

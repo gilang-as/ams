@@ -61,7 +61,7 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                $data = daftar_surat_keluar($_SESSION['angkatan']);
+                                                $data = daftar_surat_keluar($_SESSION['angkatan'], $_SESSION['ambalan']);
                                                 $no=1;
                                                 while($row=mysqli_fetch_array($data)){ 
                                                 ?>

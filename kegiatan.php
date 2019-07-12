@@ -18,10 +18,10 @@ if($_GET['halaman']=="edit"){
         edit_kegiatan($data, "WHERE id = '".$_GET['id']."'");  
         header("Location:".$domain."kegiatan");
     }
-    $kegiatan=detail_kegiatan($_SESSION['angkatan'], $_GET['id']);
+    $kegiatan=detail_kegiatan($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
     include('view/kegiatan/kegiatan-edit.php');
 }elseif($_GET['halaman']=="detail" && isset($_GET['id'])){
-    $kegiatan=detail_kegiatan($_SESSION['angkatan'], $_GET['id']);
+    $kegiatan=detail_kegiatan($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
     include('view/kegiatan/kegiatan-detail.php');
 }elseif($_GET['halaman']=="hapus" && isset($_GET['id'])){
     hapus_kegiatan("WHERE id = '".$_GET['id']."'");

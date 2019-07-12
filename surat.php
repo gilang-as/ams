@@ -46,7 +46,7 @@ if($_GET['halaman']=="masuk"){
         }
         include('view/surat/masuk-tambah.php');
     }elseif($_GET['aksi']=="edit" && isset($_GET['id'])){
-        $surat=detail_surat_masuk($_SESSION['angkatan'], $_GET['id']);
+        $surat=detail_surat_masuk($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
         if(isset($_POST['no_surat']) && isset($_POST['jenis']) && isset($_POST['perihal']) && isset($_POST['tanggal']) && isset($_POST['keterangan'])){
             if($_FILES['file']['tmp_name']!=''){
                 $ekstensi_diperbolehkan	= array('png','jpg','pdf','doc','docx');
@@ -85,12 +85,12 @@ if($_GET['halaman']=="masuk"){
         }
         include('view/surat/masuk-edit.php');
     }elseif($_GET['aksi']=="hapus" && isset($_GET['id'])){
-        $surat=detail_surat_masuk($_SESSION['angkatan'], $_GET['id']);
+        $surat=detail_surat_masuk($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
         unlink('upload/surat/masuk/'.$surat['file']);
         hapus_surat_masuk("WHERE id = '".$_GET['id']."'");
         header("Location:".$domain."surat/masuk");
     }elseif($_GET['aksi']=="detail" && isset($_GET['id'])){
-        $surat=detail_surat_masuk($_SESSION['angkatan'], $_GET['id']);
+        $surat=detail_surat_masuk($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
         include('view/surat/masuk-detail.php');
     }else{
         include('view/surat/masuk-daftar.php');
@@ -135,7 +135,7 @@ if($_GET['halaman']=="masuk"){
         }
         include('view/surat/keluar-tambah.php');
     }elseif($_GET['aksi']=="edit"  && isset($_GET['id'])){
-        $surat=detail_surat_keluar($_SESSION['angkatan'], $_GET['id']);
+        $surat=detail_surat_keluar($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
         if(isset($_POST['no_surat']) && isset($_POST['jenis']) && isset($_POST['perihal']) && isset($_POST['tanggal']) && isset($_POST['keterangan'])){
             if($_FILES['file']['tmp_name']!=''){
                 $ekstensi_diperbolehkan	= array('png','jpg','pdf','doc','docx');
@@ -175,12 +175,12 @@ if($_GET['halaman']=="masuk"){
         }
         include('view/surat/keluar-edit.php');
     }elseif($_GET['aksi']=="hapus"  && isset($_GET['id'])){
-        $surat=detail_surat_keluar($_SESSION['angkatan'], $_GET['id']);
+        $surat=detail_surat_keluar($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
         unlink('upload/surat/keluar/'.$surat['file']);
         hapus_surat_keluar("WHERE id = '".$_GET['id']."'");
         header("Location:".$domain."surat/keluar");
     }elseif($_GET['aksi']=="detail" && isset($_GET['id'])){
-        $surat=detail_surat_keluar($_SESSION['angkatan'], $_GET['id']);
+        $surat=detail_surat_keluar($_SESSION['angkatan'], $_SESSION['ambalan'], $_GET['id']);
         include('view/surat/keluar-detail.php');
     }else{
         include('view/surat/keluar-daftar.php');

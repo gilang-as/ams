@@ -101,7 +101,7 @@
 
                         <div class="row">
                             <?php
-                                $data = daftar_kegiatan($_SESSION['angkatan']);
+                                $data = daftar_kegiatan($_SESSION['angkatan'], $_SESSION['ambalan']);
                                 while($row=mysqli_fetch_array($data)){ 
                             ?>
                             <div class="col-md-6 col-xl-3">
