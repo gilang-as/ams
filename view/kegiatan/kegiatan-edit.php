@@ -1,8 +1,9 @@
+<?php tema('notification');?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Tambah Surat Masuk - Ambalan Management System</title>
+        <title>Ubah Surat Masuk - Ambalan Management System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -32,7 +33,7 @@
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Beranda</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Surat</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Masuk</a></li>
-                                            <li class="breadcrumb-item active">Tambah</li>
+                                            <li class="breadcrumb-item active">Ubah</li>
                                         </ol>
                                     </div>
                                     <h4 class="page-title">Surat Masuk</h4>
@@ -45,53 +46,37 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Tambah Surat</h4>
+                                        <h4 class="header-title">Ubah Kegiatan</h4>
                                         <p class="text-muted">
-                                            Tambahkan surat masuk.
+                                            Merubah Kegiatan.
                                         </p>
                                         <form method="POST" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <div class="form-group mb-3">
-                                                    <label for="dari">Dari</label>
-                                                    <input type="text" class="form-control" id="dari" name="dari" placeholder="Dari" required>
+                                            <div class="form-group mb-3">
+                                                    <label for="nama">Nama Kegiatan</label>
+                                                    <input type="text" id="nama" name="nama" class="form-control" value="<?php echo $kegiatan['nama']?>" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-3">
-                                                    <label for="no_surat">No Surat</label>
-                                                    <input type="text" class="form-control" id="no_surat" name="no_surat" placeholder="No Surat" required>
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="perihal">Perihal</label>
-                                                    <input type="text" class="form-control" id="perihal" name="perihal" placeholder="Perihal" required>
+                                                    <label for="kategori">Kategori</label>
+                                                    <select class="form-control" id="kategori" name="kategori" required>
+                                                    <?php foreach($jenis_kegiatan as $jenis) { ?>
+                                                        <option value="<?php echo $jenis['no'];?>"><?php echo $jenis['isi'];?></option>
+                                                    <?php } ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
-                                                    <div class="form-group mb-3">
-                                                        <label for="jenis">Jenis Surat</label>
-                                                        <select class="form-control" id="jenis" name="jenis">
-                                                        <?php foreach($jenis_surat as $jenis) { ?>
-                                                            <option value="<?php echo $jenis['no'];?>"><?php echo $jenis['isi'];?></option>
-                                                        <?php } ?>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group mb-3">
-                                                        <label for="tanggal">Tanggal</label>
-                                                        <input class="form-control" type="date" id="tanggal" name="tanggal" required>
-                                                    </div>
+                                                <div class="form-group mb-3">
+                                                    <label for="waktu">Waktu</label>
+                                                    <input type="text" class="form-control date" id="waktu" name="waktu" value="<?php echo $kegiatan['waktu']?>" required>
+                                                </div>
                                             </div>
                                             <div class="col-lg-12">
-                                                <div class="form-group mb-3">
-                                                    <label for="keteragan">Keterangan</label>
-                                                    <textarea class="form-control" rows=5 id="keterangan" name="keterangan"></textarea>
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="file">File</label>
-                                                    <input type="file" class="form-control-file" id="file" name="file">
-                                                </div>
-                                                    <a href="<?php echo $domain.'surat/masuk';?>" class="btn btn-danger float-left">Batal</a>
-                                                    <button type="submit" class="btn btn-primary float-right">Simpan</button>
+                                                <a href="<?php echo $domain.'kegiatan';?>" class="btn btn-danger float-left">Batal</a>
+                                                <button type="submit" class="btn btn-primary float-right">Simpan</button>
                                             </div>
                                         </div>
                                         </form>
@@ -104,9 +89,23 @@
                 <?php tema('footer');?>
             </div>
         </div>
-
-
         <!-- App js -->
         <script src="<?php echo $domain;?>assets/js/app.min.js"></script>
+        <script>
+            $(function() {
+            $('input[name="waktu"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                timePicker24Hour: true,
+                locale: {
+                format: 'MM/DD/YYYY HH:MM'
+                }
+            });
+            });
+        </script>
+        <?php
+        notification($beritahu);
+        ?>
     </body>
 </html>

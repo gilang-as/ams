@@ -45,7 +45,6 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-
                                         <h4 class="header-title">Daftar Surat Masuk</h4>
                                         <p class="text-muted font-14 mb-4">Daftar surat masuk yang sudah di inputkan</p>
                                         <table id="datatable-buttons" class="table table-striped dt-responsive nowrap" width="100%">

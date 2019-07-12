@@ -34,8 +34,8 @@ function tambah_surat_masuk($data){
 function edit_surat_masuk($data, $where){
     Update('cyi_surat_masuk', $data, $where);
 }
-function hapus_surat_masuk($data){
-    Delete('cyi_surat_masuk', $data);
+function hapus_surat_masuk($where){
+    Delete('cyi_surat_masuk', $where);
 }
 function total_surat_masuk($angkatan){
     global $connect;
@@ -50,11 +50,19 @@ function daftar_surat_keluar($angkatan){
     $query="SELECT * FROM cyi_surat_keluar WHERE angkatan='".$angkatan."'";
     return $result=mysqli_query($connect,$query); 
 }
+function detail_surat_keluar($angkatan, $id){
+    global $connect;
+    $query="SELECT * FROM cyi_surat_keluar WHERE angkatan='".$angkatan."' and id='".$id."'";
+    return mysqli_fetch_array(mysqli_query($connect,$query));
+}
 function tambah_surat_keluar($data){
     Insert('cyi_surat_keluar', $data);
 }
 function edit_surat_keluar($data){
     Update('cyi_surat_keluar', $data);
+}
+function hapus_surat_keluar($where){
+    Delete('cyi_surat_keluar', $where);
 }
 function total_surat_keluar($angkatan){
     global $connect;

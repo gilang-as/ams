@@ -80,8 +80,9 @@ if($_GET['halaman']=="masuk"){
           header("Location:".$domain."surat/masuk");        
         }
         include('view/surat/masuk-edit.php');
-    }elseif($_GET['aksi']=="hapus"){
-    
+    }elseif($_GET['aksi']=="hapus" && isset($_GET['id'])){
+        hapus_surat_masuk("WHERE id = '".$_GET['id']."'");
+        header("Location:".$domain."surat/masuk");
     }elseif($_GET['aksi']=="detail" && isset($_GET['id'])){
         $surat=detail_surat_masuk($_SESSION['angkatan'], $_GET['id']);
         include('view/surat/masuk-detail.php');
@@ -91,10 +92,14 @@ if($_GET['halaman']=="masuk"){
 }elseif($_GET['halaman']=="keluar"){
     if($_GET['aksi']=="tambah"){
         include('view/surat/keluar-tambah.php');
-    }elseif($_GET['aksi']=="edit"){
+    }elseif($_GET['aksi']=="edit"  && isset($_GET['id'])){
         include('view/surat/keluar-edit.php');
-    }elseif($_GET['aksi']=="hapus"){
-    
+    }elseif($_GET['aksi']=="hapus"  && isset($_GET['id'])){
+        hapus_surat_keluar("WHERE id = '".$_GET['id']."'");
+        header("Location:".$domain."surat/keluar");
+    }elseif($_GET['aksi']=="detail" && isset($_GET['id'])){
+        $surat=detail_surat_keluar($_SESSION['angkatan'], $_GET['id']);
+        include('view/surat/keluar-detail.php');
     }else{
         include('view/surat/keluar-daftar.php');
     }

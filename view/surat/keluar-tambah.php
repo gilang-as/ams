@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Masuk - Ambalan Management System</title>
+        <title>Tambah Surat Keluar - Ambalan Management System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Sistem Management Ambalan Pramuka Pada SMA di Indonesia" name="description" />
-        <meta content="Cyine ID" name="author" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="<?php echo $domain;?>assets/images/favicon.ico">
 
@@ -45,82 +45,64 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Tambah Keluar</h4>
+                                        <h4 class="header-title">Tambah Surat</h4>
                                         <p class="text-muted">
-                                            Tambahkan surat keluar.
+                                            Tambahkan surat masuk.
                                         </p>
-
+                                        <form method="POST" enctype="multipart/form-data">
                                         <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    <label for="tujuan">Tujuan</label>
+                                                    <input type="text" class="form-control" id="tujuan" name="tujuan" placeholder="Dari" required>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                        <label for="kegiatan">Kegiatan atau Acara</label>
+                                                        <select class="form-control" id="kegiatan" name="kegiatan">
+                                                        <?php foreach($jenis_surat as $jenis) { ?>
+                                                            <option value="<?php echo $jenis['no'];?>"><?php echo $jenis['isi'];?></option>
+                                                        <?php } ?>
+                                                        </select>
+                                                    </div>
+                                            </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-3">
-                                                        <label for="example-select">Jenis Surat</label>
-                                                        <select class="form-control" id="example-select">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                            <option>5</option>
-                                                        </select>
+                                                    <label for="no_surat">No Surat</label>
+                                                    <input type="text" class="form-control" id="no_surat" name="no_surat" placeholder="No Surat" required>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <label for="perihal">Perihal</label>
+                                                    <input type="text" class="form-control" id="perihal" name="perihal" placeholder="Perihal" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
-                                                <form>
-        
-                                                    
-
                                                     <div class="form-group mb-3">
-                                                        <label for="example-multiselect">Multiple Select</label>
-                                                        <select id="example-multiselect" multiple class="form-control">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                            <option>5</option>
+                                                        <label for="jenis">Jenis Surat</label>
+                                                        <select class="form-control" id="jenis" name="jenis">
+                                                        <?php foreach($jenis_surat as $jenis) { ?>
+                                                            <option value="<?php echo $jenis['no'];?>"><?php echo $jenis['isi'];?></option>
+                                                        <?php } ?>
                                                         </select>
                                                     </div>
-        
                                                     <div class="form-group mb-3">
-                                                        <label for="example-fileinput">Default file input</label>
-                                                        <input type="file" id="example-fileinput" class="form-control-file">
+                                                        <label for="tanggal">Tanggal</label>
+                                                        <input class="form-control" type="date" id="tanggal" name="tanggal" required>
                                                     </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-date">Date</label>
-                                                        <input class="form-control" id="example-date" type="date" name="date">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-month">Month</label>
-                                                        <input class="form-control" id="example-month" type="month" name="month">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-time">Time</label>
-                                                        <input class="form-control" id="example-time" type="time" name="time">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-week">Week</label>
-                                                        <input class="form-control" id="example-week" type="week" name="week">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-number">Number</label>
-                                                        <input class="form-control" id="example-number" type="number" name="number">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-color">Color</label>
-                                                        <input class="form-control" id="example-color" type="color" name="color" value="#727cf5">
-                                                    </div>
-        
-                                                    <div class="form-group mb-0">
-                                                        <label for="example-range">Range</label>
-                                                        <input class="custom-range" id="example-range" type="range" name="range" min="0" max="100">
-                                                    </div>
-                                                </form>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    <label for="keteragan">Keterangan</label>
+                                                    <textarea class="form-control" rows=5 id="keterangan" name="keterangan"></textarea>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <label for="file">File</label>
+                                                    <input type="file" class="form-control-file" id="file" name="file">
+                                                </div>
+                                                    <a href="<?php echo $domain.'surat/masuk';?>" class="btn btn-danger float-left">Batal</a>
+                                                    <button type="submit" class="btn btn-primary float-right">Simpan</button>
                                             </div>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

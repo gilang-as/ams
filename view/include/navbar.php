@@ -113,22 +113,10 @@
                             </ul>
                         </li>
                         <li class="side-nav-item">
-                            <a href="javascript: void(0);" class="side-nav-link">
-                                <i class="dripicons-copy"></i>
+                            <a href="<?php domain('kegiatan');?>" class="side-nav-link">
+                                <i class="dripicons-meter"></i>
                                 <span> Kegiatan </span>
-                                <span class="menu-arrow"></span>
                             </a>
-                            <ul class="side-nav-second-level" aria-expanded="false">
-                                <li>
-                                    <a href="<?php domain('kegiatan');?>">Daftar Kegiatan</a>
-                                </li>
-                                <li>
-                                    <a href="<?php domain('kegiatan/tambah');?>">Tambah Kegiatan</a>
-                                </li>
-                                <li>
-                                    <a href="<?php domain('kegiatan/kategori');?>">Kategori Kegiatan</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="side-nav-item">
                             <a href="javascript: void(0);" class="side-nav-link">

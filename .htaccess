@@ -8,8 +8,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^$ index.php [QSA]
 # **** Dashboard ****
 RewriteRule ^dashboard$ dashboard.php [QSA]
+
 # **** Kegiatan ****
 RewriteRule ^kegiatan$ kegiatan.php [QSA]
+RewriteRule ^kegiatan/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ kegiatan.php?halaman=$1&id=$2 [QSA]
 # **** Surat ****
 RewriteRule ^surat$ surat.php [QSA]
 RewriteRule ^surat/([A-Za-z0-9_-]+)$ surat.php?halaman=$1 [QSA]
@@ -34,3 +36,7 @@ RewriteRule ^tku-tkk$ tku-tkk.php [QSA]
 
 # **** SKU ****
 RewriteRule ^sku$ sku.php [QSA]
+
+#Error
+RewriteRule ^error/([A-Za-z0-9_-]+)$ error.php?tipe=$1 [QSA]
+ErrorDocument 404 /ams/error/404
