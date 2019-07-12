@@ -72,7 +72,7 @@
                                                         <label for="jenis">Jenis Surat</label>
                                                         <select class="form-control" id="jenis" name="jenis">
                                                         <?php foreach($jenis_surat as $jenis) { ?>
-                                                            <option value="<?php echo $jenis['no'];?>" <?php if($jenis['no']==$surat['perihal']){ echo "selected";};?>><?php echo $jenis['isi'];?></option>
+                                                            <option value="<?php echo $jenis['no'];?>" <?php if($jenis['no']==$surat['jenis']){ echo "selected";};?>><?php echo $jenis['isi'];?></option>
                                                         <?php } ?>
                                                         </select>
                                                     </div>

@@ -8,7 +8,11 @@
         <meta content="Coderthemes" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="<?php echo $domain;?>assets/images/favicon.ico">
-
+        <!-- third party css -->
+        <link href="<?php echo $domain;?>assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $domain;?>assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $domain;?>assets/css/vendor/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $domain;?>assets/css/vendor/select.bootstrap4.css" rel="stylesheet" type="text/css" />
         <!-- App css -->
         <link href="<?php echo $domain;?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo $domain;?>assets/css/app.min.css" rel="stylesheet" type="text/css" />
@@ -39,8 +43,8 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Daftar Surat Masuk</h4>
-                                        <p class="text-muted font-14 mb-4">Daftar surat masuk yang sudah di inputkan</p>
+                                        <h4 class="header-title">Daftar Proposal</h4>
+                                        <p class="text-muted font-14 mb-4">Daftar Proposal yang sudah di inputkan</p>
                                         <table id="datatable-buttons" class="table table-striped dt-responsive nowrap" width="100%">
                                             <thead>
                                                 <tr>
@@ -53,19 +57,21 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                $data = daftar_proposal($_SESSION['angkatan']);
+                                                $data = daftar_proposal($_SESSION['angkatan'], $_SESSION['ambalan']);
                                                 $no=1;
                                                 while($row=mysqli_fetch_array($data)){ 
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $no;?></td>
-                                                    <td><?php echo $row['tanggal'];?></td>
-                                                    <td><?php echo $row['perihal'];?></td>
+                                                    <td><?php echo $row['nama'];?></td>
+                                                    <td><?php echo $row['keterangan'];?></td>
+                                                    <td>
+                                                    <a href="<?php echo $domain.'upload/proposal/'.$row['file'];?>" class="btn btn-primary"><i class="mdi mdi-download"></i></a>
+                                                    </td>
                                                     <td>
                                                         <div class="btn-group mb-2">
-                                                            <a href="<?php echo $domain.'surat/masuk/hapus/'.$row['id'];?>" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>
-                                                            <a href="<?php echo $domain.'surat/masuk/detail/'.$row['id'];?>" class="btn btn-primary"><i class="mdi mdi-eye"></i></a>
-                                                            <a href="<?php echo $domain.'surat/masuk/edit/'.$row['id'];?>" class="btn btn-success"><i class="mdi mdi-playlist-edit"></i></a>
+                                                            <a href="<?php echo $domain.'proposal/hapus/'.$row['id'];?>" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>
+                                                            <a href="<?php echo $domain.'proposal/edit/'.$row['id'];?>" class="btn btn-success"><i class="mdi mdi-playlist-edit"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -86,9 +92,21 @@
             </div>
 
         </div>
-        <!-- END wrapper -->
-
         <!-- App js -->
         <script src="<?php echo $domain;?>assets/js/app.min.js"></script>
+        <!-- third party js -->
+        <script src="<?php echo $domain;?>assets/js/vendor/jquery.dataTables.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/dataTables.bootstrap4.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/dataTables.responsive.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/responsive.bootstrap4.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/dataTables.buttons.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/buttons.bootstrap4.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/buttons.html5.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/buttons.flash.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/buttons.print.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/dataTables.keyTable.min.js"></script>
+        <script src="<?php echo $domain;?>assets/js/vendor/dataTables.select.min.js"></script>
+        <!-- demo app -->
+        <script src="<?php echo $domain;?>assets/js/pages/demo.datatable-init.js"></script>
     </body>
 </html>

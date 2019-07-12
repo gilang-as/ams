@@ -60,10 +60,10 @@
                                                         <label for="kegiatan">Kegiatan atau Acara</label>
                                                         <select class="form-control" id="kegiatan" name="kegiatan">
                                                         <?php
-                                                            $data = daftar_kegiatan($_SESSION['angkatan']);
+                                                            $data = daftar_kegiatan($_SESSION['angkatan'], $_SESSION['ambalan']);
                                                             while($row=mysqli_fetch_array($data)){ 
                                                         ?>
-                                                            <option value="<?php echo $row['id'];?>"><?php echo $row['nama'];?></option>
+                                                            <option value="<?php echo $row['id'];?> <?php if($row['id']==$surat['kegiatan']){ echo "selected";};?>"><?php echo $row['nama'];?></option>
                                                         <?php } ?>
                                                         </select>
                                                     </div>
@@ -83,7 +83,7 @@
                                                         <label for="jenis">Jenis Surat</label>
                                                         <select class="form-control" id="jenis" name="jenis">
                                                         <?php foreach($jenis_surat as $jenis) { ?>
-                                                            <option value="<?php echo $jenis['no'];?>"><?php echo $jenis['isi'];?></option>
+                                                            <option value="<?php echo $jenis['no'];?>" <?php if($jenis['no']==$surat['jenis']){ echo "selected";};?>><?php echo $jenis['isi'];?></option>
                                                         <?php } ?>
                                                         </select>
                                                     </div>

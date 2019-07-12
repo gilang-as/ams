@@ -60,7 +60,7 @@
                                                         <label for="kegiatan">Kegiatan atau Acara</label>
                                                         <select class="form-control" id="kegiatan" name="kegiatan">
                                                         <?php
-                                                            $data = daftar_kegiatan($_SESSION['angkatan']);
+                                                            $data = daftar_kegiatan($_SESSION['angkatan'], $_SESSION['ambalan']);
                                                             while($row=mysqli_fetch_array($data)){ 
                                                         ?>
                                                             <option value="<?php echo $row['id'];?>"><?php echo $row['nama'];?></option>

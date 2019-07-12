@@ -12,6 +12,7 @@ RewriteRule ^dashboard$ dashboard.php [QSA]
 # **** Kegiatan ****
 RewriteRule ^kegiatan$ kegiatan.php [QSA]
 RewriteRule ^kegiatan/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ kegiatan.php?halaman=$1&id=$2 [QSA]
+
 # **** Surat ****
 RewriteRule ^surat$ surat.php [QSA]
 RewriteRule ^surat/([A-Za-z0-9_-]+)$ surat.php?halaman=$1 [QSA]
@@ -21,10 +22,12 @@ RewriteRule ^surat/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ surat.php
 # **** Proposal ****
 RewriteRule ^proposal$ proposal.php [QSA]
 RewriteRule ^proposal/([A-Za-z0-9_-]+)$ proposal.php?halaman=$1 [QSA]
+RewriteRule ^proposal/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ proposal.php?halaman=$1&id=$2 [QSA]
 
-# **** Proposal ****
+# **** LAPORAN (LPJ) ****
 RewriteRule ^lpj$ lpj.php [QSA]
 RewriteRule ^lpj/([A-Za-z0-9_-]+)$ lpj.php?halaman=$1 [QSA]
+RewriteRule ^lpj/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ lpj.php?halaman=$1&id=$2 [QSA]
 
 # **** Akun ****
 RewriteRule ^akun/([A-Za-z0-9_-]+)$ akun.php?halaman=$1 [QSA]

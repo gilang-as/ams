@@ -184,22 +184,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="side-nav-item">
-                            <a href="javascript: void(0);" class="side-nav-link">
-                                <i class="dripicons-briefcase"></i>
-                                <span> Alumni </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul class="side-nav-second-level" aria-expanded="false">
-                                <li>
-                                    <a href="<?php domain('alumni');?>">Daftar Alumni</a>
-                                </li>
-                                <li>
-                                    <a href="<?php domain('alumni/tambah');?>">Tambah Alumni</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
                     <div class="help-box text-white text-center">
                         <a href="javascript: void(0);" class="float-right close-btn text-white">
                             <i class="mdi mdi-close"></i>
