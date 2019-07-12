@@ -1,5 +1,8 @@
 <?php
 include('setting/config.php');
+if(empty($_SESSION['status'])){
+    header("location:".$domain."akun/masuk");
+}
 if($_GET['halaman']=="tambah"){
     include('view/lpj/tambah.php');
 }elseif($_GET['halaman']=="edit"){

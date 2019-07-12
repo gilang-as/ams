@@ -74,9 +74,9 @@
                                                     <td><?php echo $row['perihal'];?></td>
                                                     <td>
                                                         <div class="btn-group mb-2">
-                                                            <a href="<?php echo $domain.'surat/masuk/hapus/'.$row['id'];?>" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>
-                                                            <a href="<?php echo $domain.'surat/masuk/detail/'.$row['id'];?>" class="btn btn-primary"><i class="mdi mdi-eye"></i></a>
-                                                            <a href="<?php echo $domain.'surat/masuk/edit/'.$row['id'];?>" class="btn btn-success"><i class="mdi mdi-playlist-edit"></i></a>
+                                                            <a href="<?php echo $domain.'surat/keluar/hapus/'.$row['id'];?>" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>
+                                                            <a href="<?php echo $domain.'surat/keluar/detail/'.$row['id'];?>" class="btn btn-primary"><i class="mdi mdi-eye"></i></a>
+                                                            <a href="<?php echo $domain.'surat/keluar/edit/'.$row['id'];?>" class="btn btn-success"><i class="mdi mdi-playlist-edit"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>

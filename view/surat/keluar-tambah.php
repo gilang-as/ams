@@ -54,13 +54,16 @@
                                             <div class="col-lg-12">
                                                 <div class="form-group mb-3">
                                                     <label for="tujuan">Tujuan</label>
-                                                    <input type="text" class="form-control" id="tujuan" name="tujuan" placeholder="Dari" required>
+                                                    <input type="text" class="form-control" id="tujuan" name="tujuan" placeholder="Tujuan" required>
                                                 </div>
                                                 <div class="form-group mb-3">
                                                         <label for="kegiatan">Kegiatan atau Acara</label>
                                                         <select class="form-control" id="kegiatan" name="kegiatan">
-                                                        <?php foreach($jenis_surat as $jenis) { ?>
-                                                            <option value="<?php echo $jenis['no'];?>"><?php echo $jenis['isi'];?></option>
+                                                        <?php
+                                                            $data = daftar_kegiatan($_SESSION['angkatan']);
+                                                            while($row=mysqli_fetch_array($data)){ 
+                                                        ?>
+                                                            <option value="<?php echo $row['id'];?>"><?php echo $row['nama'];?></option>
                                                         <?php } ?>
                                                         </select>
                                                     </div>

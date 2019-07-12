@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>Ubah Surat Keluar - Ambalan Management System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -32,7 +32,7 @@
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Beranda</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Surat</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Keluar</a></li>
-                                            <li class="breadcrumb-item active">Edit</li>
+                                            <li class="breadcrumb-item active">Ubah</li>
                                         </ol>
                                     </div>
                                     <h4 class="page-title">Surat Keluar</h4>
@@ -45,130 +45,67 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Edit Surat Keluar</h4>
+                                        <h4 class="header-title">Ubah Surat</h4>
                                         <p class="text-muted">
-                                            Edit surat keluar.
+                                            Mengubah Surat Keluar yang sudah di inputkan sebelumnya.
                                         </p>
-
+                                        <form method="POST" enctype="multipart/form-data">
                                         <div class="row">
-                                            <div class="col-lg-6">
-                                                <form>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="simpleinput">Text</label>
-                                                        <input type="text" id="simpleinput" class="form-control">
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    <label for="tujuan">Tujuan</label>
+                                                    <input type="text" class="form-control" id="tujuan" name="tujuan" placeholder="Tujuan" value="<?php echo $surat['tujuan'];?>" required>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                        <label for="kegiatan">Kegiatan atau Acara</label>
+                                                        <select class="form-control" id="kegiatan" name="kegiatan">
+                                                        <?php
+                                                            $data = daftar_kegiatan($_SESSION['angkatan']);
+                                                            while($row=mysqli_fetch_array($data)){ 
+                                                        ?>
+                                                            <option value="<?php echo $row['id'];?>"><?php echo $row['nama'];?></option>
+                                                        <?php } ?>
+                                                        </select>
                                                     </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-email">Email</label>
-                                                        <input type="email" id="example-email" name="example-email" class="form-control" placeholder="Email">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-password">Password</label>
-                                                        <input type="password" id="example-password" class="form-control" value="password">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-palaceholder">Placeholder</label>
-                                                        <input type="text" id="example-palaceholder" class="form-control" placeholder="placeholder">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-textarea">Text area</label>
-                                                        <textarea class="form-control" id="example-textarea" rows="5"></textarea>
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-readonly">Readonly</label>
-                                                        <input type="text" id="example-readonly" class="form-control" readonly="" value="Readonly value">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-disable">Disabled</label>
-                                                        <input type="text" class="form-control" id="example-disable" disabled="" value="Disabled value">
-                                                    </div>
-    
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-static">Static control</label>
-                                                        <input type="text" readonly class="form-control-plaintext" id="example-static" value="email@example.com">
-                                                    </div>
-
-                                                    <div class="form-group mb-0">
-                                                        <label for="example-helping">Helping text</label>
-                                                        <input type="text" id="example-helping" class="form-control" placeholder="Helping text">
-                                                        <span class="help-block"><small>A block of help text that breaks onto a new line and may extend beyond one line.</small></span>
-                                                    </div>
-        
-                                                </form>
                                             </div>
                                             <div class="col-lg-6">
-                                                <form>
-        
+                                                <div class="form-group mb-3">
+                                                    <label for="no_surat">No Surat</label>
+                                                    <input type="text" class="form-control" id="no_surat" name="no_surat" placeholder="No Surat" value="<?php echo $surat['no_surat'];?>"  required>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <label for="perihal">Perihal</label>
+                                                    <input type="text" class="form-control" id="perihal" name="perihal" placeholder="Perihal" value="<?php echo $surat['perihal'];?>"  required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="example-select">Input Select</label>
-                                                        <select class="form-control" id="example-select">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                            <option>5</option>
+                                                        <label for="jenis">Jenis Surat</label>
+                                                        <select class="form-control" id="jenis" name="jenis">
+                                                        <?php foreach($jenis_surat as $jenis) { ?>
+                                                            <option value="<?php echo $jenis['no'];?>"><?php echo $jenis['isi'];?></option>
+                                                        <?php } ?>
                                                         </select>
                                                     </div>
-
                                                     <div class="form-group mb-3">
-                                                        <label for="example-multiselect">Multiple Select</label>
-                                                        <select id="example-multiselect" multiple class="form-control">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                            <option>5</option>
-                                                        </select>
+                                                        <label for="tanggal">Tanggal</label>
+                                                        <input class="form-control" type="date" id="tanggal" name="tanggal" value="<?php echo $surat['tanggal'];?>"  required>
                                                     </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-fileinput">Default file input</label>
-                                                        <input type="file" id="example-fileinput" class="form-control-file">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-date">Date</label>
-                                                        <input class="form-control" id="example-date" type="date" name="date">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-month">Month</label>
-                                                        <input class="form-control" id="example-month" type="month" name="month">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-time">Time</label>
-                                                        <input class="form-control" id="example-time" type="time" name="time">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-week">Week</label>
-                                                        <input class="form-control" id="example-week" type="week" name="week">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-number">Number</label>
-                                                        <input class="form-control" id="example-number" type="number" name="number">
-                                                    </div>
-        
-                                                    <div class="form-group mb-3">
-                                                        <label for="example-color">Color</label>
-                                                        <input class="form-control" id="example-color" type="color" name="color" value="#727cf5">
-                                                    </div>
-        
-                                                    <div class="form-group mb-0">
-                                                        <label for="example-range">Range</label>
-                                                        <input class="custom-range" id="example-range" type="range" name="range" min="0" max="100">
-                                                    </div>
-                                                </form>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    <label for="keteragan">Keterangan</label>
+                                                    <textarea class="form-control" rows=5 id="keterangan" name="keterangan"><?php echo $surat['keterangan'];?></textarea>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <label for="file">File</label>
+                                                    <input type="file" class="form-control-file" id="file" name="file">
+                                                </div>
+                                                    <a href="<?php echo $domain.'surat/masuk';?>" class="btn btn-danger float-left">Batal</a>
+                                                    <button type="submit" class="btn btn-primary float-right">Simpan</button>
                                             </div>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

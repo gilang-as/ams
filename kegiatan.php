@@ -1,6 +1,9 @@
 <?php
 include('setting/config.php');
 require_once('function/kegiatan.php');
+if(empty($_SESSION['status'])){
+    header("location:".$domain."akun/masuk");
+}
 $json = file_get_contents('data/jenis_kegiatan.json');
 $jenis_kegiatan = json_decode($json, TRUE);
 if($_GET['halaman']=="edit"){

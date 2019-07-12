@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Detail Surat Masuk - Ambalan Management System</title>
+        <title>Detail Surat Keluar - Ambalan Management System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -27,13 +27,13 @@
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Surat</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Masuk</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Keluar</a></li>
                                             <li class="breadcrumb-item active">Detail</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Detail Surat Masuk</h4>
+                                    <h4 class="page-title">Detail Surat Keluar</h4>
                                 </div>
                             </div>
                         </div>     
