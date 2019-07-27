@@ -24,10 +24,18 @@ RewriteRule ^proposal$ proposal.php [QSA]
 RewriteRule ^proposal/([A-Za-z0-9_-]+)$ proposal.php?halaman=$1 [QSA]
 RewriteRule ^proposal/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ proposal.php?halaman=$1&id=$2 [QSA]
 
-# **** LAPORAN (LPJ) ****
+# **** Laporan (LPJ) ****
 RewriteRule ^lpj$ lpj.php [QSA]
 RewriteRule ^lpj/([A-Za-z0-9_-]+)$ lpj.php?halaman=$1 [QSA]
 RewriteRule ^lpj/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ lpj.php?halaman=$1&id=$2 [QSA]
+
+# **** Kelas ****
+RewriteRule ^kelas$ kelas.php [QSA]
+RewriteRule ^kelas/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ kelas.php?halaman=$1&id=$2 [QSA]
+
+# **** Sangga ****
+RewriteRule ^sangga$ sangga.php [QSA]
+RewriteRule ^sangga/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ sangga.php?halaman=$1&id=$2 [QSA]
 
 # **** Akun ****
 RewriteRule ^akun/([A-Za-z0-9_-]+)$ akun.php?halaman=$1 [QSA]
