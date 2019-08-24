@@ -1,6 +1,6 @@
 <?php
 include('setting/config.php');
-require_once('function/kelas.php');
+require_once('function/sangga.php');
 if(empty($_SESSION['status'])){
     header("location:".$domain."akun/masuk");
 }
@@ -9,21 +9,21 @@ if($_GET['halaman']=="edit" && isset($_GET['id'])){
         $data = array(
             'nama'	=> $_POST['nama']
             );
-        edit_kelas($data, "WHERE id = '".$_GET['id']."'");  
-        header("Location:".$domain."kelas");
+        edit_sangga($data, "WHERE id = '".$_GET['id']."'");  
+        header("Location:".$domain."sangga");
     }
-    $kelas=detail_kelas($_GET['id']);
-    include('view/kelas/edit.php');
+    $sangga=detail_sangga($_GET['id']);
+    include('view/sangga/edit.php');
 }elseif($_GET['halaman']=="hapus" && isset($_GET['id'])){
-    hapus_kelas("WHERE id = '".$_GET['id']."'");
-    header("Location:".$domain."kelas");
+    hapus_sangga("WHERE id = '".$_GET['id']."'");
+    header("Location:".$domain."sangga");
 }else{
     if(isset($_POST['nama'])){
         $data = array(
             'nama'	=> $_POST['nama']
             );
-        tambah_kelas($data);
+        tambah_sangga($data);
     }
-include('view/kelas/daftar.php');
+include('view/sangga/daftar.php');
 }
 ?>

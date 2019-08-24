@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Daftar Surat Masuk - Ambalan Management System</title>
+        <title>Daftar Kelas - Ambalan Management System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -32,29 +32,28 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Beranda</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Surat</a></li>
-                                            <li class="breadcrumb-item active">Masuk</li>
+                                            <li class="breadcrumb-item active">Kelas</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Surat Masuk</h4>
+                                    <h4 class="page-title">Daftar Kelas</h4>
                                 </div>
                             </div>
                         </div> 
 
                         <div class="row">
                         <div class="col-sm-4">
-                                <button type="button" class="btn btn-danger btn-rounded mb-3" data-toggle="modal" data-target="#myModal"><i class="mdi mdi-plus"></i> Tambah Kegiatan</button>
+                                <button type="button" class="btn btn-danger btn-rounded mb-3" data-toggle="modal" data-target="#myModal"><i class="mdi mdi-plus"></i> Tambah Kelas</button>
                                 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="modal-title" id="myModalLabel">Tambah Kegiatan</h4>
+                                                <h4 class="modal-title" id="myModalLabel">Tambah Kelas</h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                             </div>
                                             <div class="modal-body">
                                             <form method="POST">
                                                 <div class="form-group mb-3">
-                                                    <label for="nama">Nama Kegiatan</label>
+                                                    <label for="nama">Nama Kelas</label>
                                                     <input type="text" id="nama" name="nama" class="form-control" required>
                                                 </div>
                                                 <div class="modal-footer">
@@ -70,8 +69,8 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Daftar Surat Masuk</h4>
-                                        <p class="text-muted font-14 mb-4">Daftar surat masuk yang sudah di inputkan</p>
+                                        <h4 class="header-title">Daftar Kelas</h4>
+                                        <p class="text-muted font-14 mb-4">Daftar Kelas yang sudah di inputkan</p>
                                         <table id="datatable-buttons" class="table table-striped dt-responsive nowrap" width="100%">
                                             <thead>
                                                 <tr>

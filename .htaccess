@@ -42,6 +42,11 @@ RewriteRule ^akun/([A-Za-z0-9_-]+)$ akun.php?halaman=$1 [QSA]
 RewriteRule ^akun/profil/([A-Za-z0-9_-]+)$ akun.php?halaman=profil&akun=$2 [QSA]
 RewriteRule ^akun/edit/([A-Za-z0-9_-]+)$ akun.php?halaman=edit&akun=$2 [QSA]
 
+# **** Siswa ****
+RewriteRule ^siswa$ siswa.php [QSA]
+RewriteRule ^siswa/([A-Za-z0-9_-]+)$ siswa.php?halaman=$1 [QSA]
+RewriteRule ^siswa/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ siswa.php?halaman=$1&id=$2 [QSA]
+
 # **** TKU & TKK ****
 RewriteRule ^tku-tkk$ tku-tkk.php [QSA]
 

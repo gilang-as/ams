@@ -146,9 +146,6 @@
                                 <li>
                                     <a href="<?php domain('kelas');?>">Daftar Kelas</a>
                                 </li>
-                                <li>
-                                    <a href="<?php domain('kelas/tambah');?>">Tambah Kegiatan</a>
-                                </li>
                             </ul>
                         </li>
                         <li class="side-nav-item">
@@ -160,9 +157,6 @@
                             <ul class="side-nav-second-level" aria-expanded="false">
                                 <li>
                                     <a href="<?php domain('sangga');?>">Daftar Sangga</a>
-                                </li>
-                                <li>
-                                    <a href="<?php domain('sangga/tambah');?>">Tambah Sangga</a>
                                 </li>
                             </ul>
                         </li>
