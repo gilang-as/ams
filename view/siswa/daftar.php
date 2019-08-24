@@ -60,7 +60,7 @@
                                                             </div>
                                                             <div class="form-group mb-3">
                                                                 <label for="email">Email</label>
-                                                                <input type="mail" id="email" name="email" class="form-control" required>
+                                                                <input type="mail" id="email" name="email" class="form-control">
                                                             </div>
                                                             <div class="form-group mb-3">
                                                                 <label for="nis">NIS</label>
@@ -139,7 +139,7 @@
                                                     <th>No</th>
                                                     <th>NIS</th>
                                                     <th>Nama</th>
-                                                    <th>ID</th>
+                                                    <th>Jekel</th>
                                                     <th>Pengaturan</th>
                                                 </tr>
                                             </thead>
@@ -153,7 +153,7 @@
                                                     <td><?php echo $no;?></td>
                                                     <td><?php echo $row['nis'];?></td>
                                                     <td><?php echo $row['nama'];?></td>
-                                                    <td><?php echo $row['email'];?></td>
+                                                    <td><?php echo $jekel[$row['jekel']];?></td>
                                                     <td>
                                                         <div class="btn-group mb-2">
                                                             <a href="<?php echo $domain.'siswa/hapus/'.$row['nis'];?>" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>

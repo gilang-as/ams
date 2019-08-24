@@ -116,7 +116,10 @@
                                         </h4>
                                         <p class="mb-3">
                                             <span class="pr-2 text-nowrap">
-                                                <b><?php echo $row['waktu'];?></b>
+                                                <b><?php echo waktu($row['waktu'])["mulai"]["tanggal"];?></b>
+                                            </span>
+                                            <span class="pr-2 text-nowrap">
+                                                <b><?php echo waktu($row['waktu'])["selesai"]["tanggal"];?></b>
                                             </span>
                                         </p>
                                         <div class="row">
@@ -144,7 +147,7 @@
                 endDate: moment().startOf('hour').add(32, 'hour'),
                 timePicker24Hour: true,
                 locale: {
-                format: 'MM/DD/YYYY HH:MM'
+                format: 'DD/MM/YYYY hh:mm'
                 }
             });
             });

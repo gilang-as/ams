@@ -20,13 +20,13 @@ if($_GET['halaman']=="masuk"){
             $natif='Galal Masuk';	
         }
     }elseif(isset($_SESSION['status'])){
-        header("location:".$domain."akun/profil/".$_SESSION['nis']);
+        header("location:".$domain."akun/profil");
     }
     include('view/akun/masuk.php');
 }elseif($_GET['halaman']=="keluar"){
     session_destroy();
     include('view/akun/keluar.php');
-}elseif($_GET['halaman']=="profil" && isset($_GET['akun'])){
+}elseif($_GET['halaman']=="profil"){
     $profil_qry="SELECT * FROM cyi_akun WHERE nis='".$_SESSION['nis']."'";
 	$profil=mysqli_fetch_assoc(mysqli_query($connect,$profil_qry));
     include('view/akun/profil.php');

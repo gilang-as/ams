@@ -64,33 +64,25 @@
                                         <h3 class="mt-0">
                                         <?php echo $kegiatan['nama']?>
                                         </h3>
-                                        <div class="badge badge-secondary mb-3">Ongoing</div>
+                                        <div class="badge badge-secondary mb-3">Akan Datang</div>
 
-                                        <h5>Project Overview:</h5>
+                                        <h5>Keterangan:</h5>
 
                                         <p class="text-muted mb-2">
-                                            With supporting text below as a natural lead-in to additional contenposuere erat a ante. Voluptates, illo, iste itaque voluptas
-                                            corrupti ratione reprehenderit magni similique? Tempore, quos delectus asperiores libero voluptas quod perferendis! Voluptate,
-                                            quod illo rerum? Lorem ipsum dolor sit amet.
-                                        </p>
-
-                                        <p class="text-muted mb-4">
-                                            Voluptates, illo, iste itaque voluptas corrupti ratione reprehenderit magni similique? Tempore, quos delectus asperiores
-                                            libero voluptas quod perferendis! Voluptate, quod illo rerum? Lorem ipsum dolor sit amet. With supporting text below
-                                            as a natural lead-in to additional contenposuere erat a ante.
+                                            Belum Berfungsi
                                         </p>
 
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="mb-4">
                                                     <h5>Waktu Mulai</h5>
-                                                    <p>Senin, 17 March 2018 <small class="text-muted">1:00 PM</small></p>
+                                                    <p><?php echo waktu($kegiatan['waktu'])["mulai"]["tanggal"];?> <small class="text-muted"><?php echo waktu($kegiatan['waktu'])["mulai"]["jam"];?></small></p>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="mb-4">
                                                     <h5>Waktu Selesai</h5>
-                                                    <p>Selasa, 22 December 2018 <small class="text-muted">1:00 PM</small></p>
+                                                    <p><?php echo waktu($kegiatan['waktu'])["selesai"]["tanggal"];?> <small class="text-muted"><?php echo waktu($kegiatan['waktu'])["selesai"]["jam"];?></small></p>
                                                 </div>
                                             </div>
                                         </div>

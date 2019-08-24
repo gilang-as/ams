@@ -28,6 +28,7 @@
                                 <span> TKU & TKK </span>
                             </a>
                         </li>
+                        <!--
                         <li class="side-nav-item">
                             <a href="<?php domain('materi');?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
@@ -40,8 +41,9 @@
                                 <span> Tugas </span>
                             </a>
                         </li>
+                        -->
                         <li class="side-nav-item">
-                            <a href="<?php domain('akun/profil/'.$_SESSION['nis']);?>" class="side-nav-link">
+                            <a href="<?php domain('akun/profil');?>" class="side-nav-link">
                                 <i class="dripicons-meter"></i>
                                 <span> Akun </span>
                             </a>
@@ -171,22 +173,10 @@
                                     <a href="<?php domain('siswa');?>">Daftar Siswa</a>
                                 </li>
                                 <li>
-                                    <a href="<?php domain('siswa/tambah');?>">Tambah Siswa</a>
-                                </li>
-                                <li>
                                     <a href="<?php domain('siswa/import');?>">Import Siswa</a>
                                 </li>
                             </ul>
                         </li>
-                    <div class="help-box text-white text-center">
-                        <a href="javascript: void(0);" class="float-right close-btn text-white">
-                            <i class="mdi mdi-close"></i>
-                        </a>
-                        <img src="assets/images/help-icon.svg" height="90" alt="Helper Icon Image" />
-                        <h5 class="mt-3">Unlimited Access</h5>
-                        <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
-                        <a href="javascript: void(0);" class="btn btn-outline-light btn-sm">Upgrade</a>
-                    </div>
                     <div class="clearfix"></div>
                 </div>
             </div>

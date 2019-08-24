@@ -1,7 +1,7 @@
 <?php
-function daftar_sangga(){
+function daftar_sangga($ambalan){
     global $connect;
-    $quotes_qry="SELECT * FROM cyi_sangga";
+    $quotes_qry="SELECT * FROM cyi_sangga WHERE ambalan = $ambalan";
     return $result=mysqli_query($connect,$quotes_qry); 
 }
 function detail_sangga($id){

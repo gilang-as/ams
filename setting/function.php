@@ -13,6 +13,20 @@ function domain($url){
     global $domain;
     echo $domain.$url;
 }
+function waktu($data){
+    $waktu=explode("-",$data);
+    $data=array(
+        "mulai"=> [
+            "tanggal" => explode(" ",$waktu[0])[0],
+            "jam" => explode(" ",$waktu[0])[1]
+        ],
+        "selesai"=>[
+            "tanggal" => explode(" ",$waktu[1])[1],
+            "jam" => explode(" ",$waktu[1])[2]
+        ]
+    );
+    return $data;
+}
 function Insert($table, $data){
 
     global $connect;
@@ -27,8 +41,7 @@ function Insert($table, $data){
 
 }
 // Update Data, Where clause is left optional
-function Update($table_name, $form_data, $where_clause='')
-{   
+function Update($table_name, $form_data, $where_clause=''){   
     global $connect;
     // check for optional where clause
     $whereSQL = '';
@@ -61,11 +74,8 @@ function Update($table_name, $form_data, $where_clause='')
     // run and return the query result
     return mysqli_query($connect,$sql);
 }
-
- 
 //Delete Data, the where clause is left optional incase the user wants to delete every row!
-function Delete($table_name, $where_clause='')
-{   
+function Delete($table_name, $where_clause=''){   
     global $connect;
     // check for optional where clause
     $whereSQL = '';
@@ -87,10 +97,8 @@ function Delete($table_name, $where_clause='')
     // run and return the query result resource
     return mysqli_query($connect,$sql);
 }  
- 
 //Image compress
-function compress_image($source_url, $destination_url, $quality) 
-{
+function compress_image($source_url, $destination_url, $quality) {
 
     $info = getimagesize($source_url);
 
@@ -108,8 +116,7 @@ function compress_image($source_url, $destination_url, $quality)
 }
 
 //Create Thumb Image
-function create_thumb_image($target_folder ='',$thumb_folder = '', $thumb_width = '',$thumb_height = '')
- {  
+function create_thumb_image($target_folder ='',$thumb_folder = '', $thumb_width = '',$thumb_height = ''){  
      //folder path setup
          $target_path = $target_folder;
          $thumb_path = $thumb_folder;  

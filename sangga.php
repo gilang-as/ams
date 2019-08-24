@@ -20,7 +20,8 @@ if($_GET['halaman']=="edit" && isset($_GET['id'])){
 }else{
     if(isset($_POST['nama'])){
         $data = array(
-            'nama'	=> $_POST['nama']
+            'nama'	=> $_POST['nama'],
+            'ambalan'	=> $_SESSION['ambalan']
             );
         tambah_sangga($data);
     }

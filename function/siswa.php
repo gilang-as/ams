@@ -4,9 +4,9 @@ function daftar_siswa(){
     $quotes_qry="SELECT * FROM cyi_akun";
     return $result=mysqli_query($connect,$quotes_qry); 
 }
-function detail_siswa($id){
+function detail_siswa($nis){
     global $connect;
-    $query="SELECT * FROM cyi_akun WHERE id='".$id."'";
+    $query="SELECT * FROM cyi_akun WHERE nis='".$nis."'";
     return mysqli_fetch_array(mysqli_query($connect,$query));
 }
 function tambah_siswa($data){
