@@ -58,6 +58,10 @@ RewriteRule ^tku-tkk$ tku-tkk.php [QSA]
 # **** SKU ****
 RewriteRule ^sku$ sku.php [QSA]
 
+# **** API ****
+RewriteRule ^api$ api.php [QSA]
+RewriteRule ^api/v2$ api.php?type=v2 [QSA]
+
 #Error
 RewriteRule ^error/([A-Za-z0-9_-]+)$ error.php?tipe=$1 [QSA]
 ErrorDocument 404 /ams/error/404

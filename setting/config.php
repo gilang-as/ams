@@ -3,6 +3,8 @@ error_reporting(0);
 date_default_timezone_set('UTC');
 //Domain "http://localhost/"
 $domain="http://project/ams/";
+//Key API
+$apiKey="5a0643580c864c3a9bb934529b055402";
 //Database
 $hostname="localhost";
 $username="root";
